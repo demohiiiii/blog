@@ -31,6 +31,8 @@ export interface Page {
 export interface CardInfo {
   title: string;
   image?: string;
+  random?: boolean;
+  imageSize?: string;
   pubDate?: Date;
   badge?: string;
   categories?: string[];
@@ -46,6 +48,8 @@ export interface EnvelopeInfo {
   title: string;
   desc: string;
   image?: string;
+  random?: string;
+  imageSize?: string;
   pubDate?: Date;
   badge?: string;
   categories?: string[];

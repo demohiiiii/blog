@@ -3,18 +3,18 @@
 
 // Site title and description
 export const SITE_LANG = "en";
-export const SITE_TAB = "Frosti";
-export const SITE_TITLE = "Frosti 🧊";
-export const SITE_DESCRIPTION = "A blog template";
+export const SITE_TAB = "blog";
+export const SITE_TITLE = "demohiiiii's blog";
+export const SITE_DESCRIPTION = "观察 记录";
 export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
-export const USER_NAME = "EveSunMaple";
+export const USER_NAME = "demohiiiii";
 export const USER_SITE = "https://frosti.saroprock.com"; // At the same time, this is also the site retrieved by the i18n configuration.
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
-export const SERVER_URL = "https://demo.saroprock.com";
+export const SERVER_URL = "https://blog.demohiiiii.top";
 
 // Theme settings
 export const DAISYUI_THEME = {
@@ -86,19 +86,19 @@ export const menuItems = [
 // Social media and contact icons
 export const socialIcons = [
   {
-    href: "https://afdian.net/a/saroprock",
+    href: "https://afdian.com/a/demohiiiii",
     ariaLabel: "Support my work",
     title: "Support my work",
     svg: "ri:cup-line",
   },
   {
-    href: "https://github.com/EveSunMaple",
+    href: "https://github.com/demohiiiii",
     ariaLabel: "Github",
     title: "Github",
     svg: "ri:github-line",
   },
   {
-    href: "https://space.bilibili.com/438392347",
+    href: "https://space.bilibili.com/5423223",
     ariaLabel: "BiliBili",
     title: "BiliBili",
     svg: "ri:bilibili-line",

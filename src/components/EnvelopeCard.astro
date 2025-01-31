@@ -6,12 +6,12 @@ import type { EnvelopeInfo } from "../types";
 import { DATE_FORMAT } from "../consts";
 import { t } from "i18next";
 
-const { title, desc, image, pubDate, badge, categories = [], tags = [], word, time, url } = Astro.props as EnvelopeInfo;
+const { title, desc, image, pubDate, badge, categories = [], tags = [], word, time, url, random, imageSize } = Astro.props as EnvelopeInfo;
 
 const displayDate = pubDate ? dayjs(pubDate).format(DATE_FORMAT) : null;
 ---
 
-<CardHorizontal title={title} image={image} url={url}>
+<CardHorizontal title={title} image={image} url={url} random = {random} imageSize = {imageSize}>
   <div class="relative w-full flex flex-col justify-between group">
     <div class="flex justify-between items-center mb-4 text-xs sm:text-sm opacity-75">
       <div class="flex flex-wrap items-center gap-2">

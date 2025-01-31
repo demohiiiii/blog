@@ -2,7 +2,6 @@
 title: Under The Sacred Hall
 description: ……
 pubDate: 12 5 2024
-image: /image/image4.jpg
 categories:
   - life
 ---

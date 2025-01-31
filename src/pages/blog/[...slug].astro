@@ -23,6 +23,7 @@ const { Content, remarkPluginFrontmatter } = await post.render();
   <BaseCard
     title={post.data.title}
     image={post.data.image}
+    random={post.data.image ? post.data.image : "true"}
     pubDate={post.data.pubDate}
     badge={post.data.badge}
     categories={post.data.categories}

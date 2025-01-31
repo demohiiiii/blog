@@ -73,6 +73,7 @@ const pageLinks = generatePageLinks(totalPages);
       <EnvelopeCard
         title={post.data.title}
         image={post.data.image}
+        random={post.data.image ? post.data.image : "true"}
         desc={post.data.description}
         url={"/blog/" + post.slug}
         pubDate={post.data.pubDate}

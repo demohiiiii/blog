@@ -5,9 +5,22 @@ interface Props {
   title: string;
   image?: string;
   url: string;
+  random?: string;
+  imageSize?: string;
 }
 
-const { title, image, url } = Astro.props;
+const { title, image, url, random, imageSize } = Astro.props;
+
+function hash(s: string) {
+  var hash = 0, i, chr;
+  if (s.length === 0) return hash;
+  for (i = 0; i < s.length; i++) {
+    chr   = s.charCodeAt(i);
+    hash  = ((hash << 5) - hash) + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
 ---
 
 <div class="group bg-base-100 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
@@ -19,10 +32,10 @@ const { title, image, url } = Astro.props;
 
     <!-- Image Section -->
     {
-      image && (
+      (image || random)  && (
         <a href={url} class="relative lg:w-2/5 aspect-video lg:aspect-auto overflow-hidden lg:order-2 order-1">
           <Image
-            src={image}
+            src={image ? image : ("https://picsum.photos/seed/" + hash(title) + "/" +  (imageSize ? imageSize : "1920/1080"))}
             alt={title}
             width={300}
             height={200}

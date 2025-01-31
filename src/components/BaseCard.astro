@@ -12,6 +12,8 @@ import { t } from "i18next";
 const {
   title = "undefined",
   image,
+  random,
+  imageSize,
   pubDate,
   badge,
   categories = [],
@@ -28,9 +30,9 @@ const displayDate = pubDate ? dayjs(pubDate).format(DATE_FORMAT) : "";
 
 <CardVertical>
   {
-    image && (
+    (image || random) && (
       <Image
-        src={image}
+        src={image ? image : ("https://picsum.photos/" +  (imageSize ? imageSize : "1920/1080"))}
         width="1920"
         height="1080"
         format="webp"
