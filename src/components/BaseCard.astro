@@ -5,7 +5,7 @@ import License from "../components/License.astro";
 import CommentWaline from "./CommentWaline.astro";
 import CardVertical from "../layouts/CardVertical.astro";
 import { Icon } from "astro-icon/components";
-import { DATE_FORMAT } from "../consts";
+import { DATE_FORMAT, randomImg } from "../consts";
 import type { CardInfo } from "../types";
 import { t } from "i18next";
 
@@ -32,7 +32,7 @@ const displayDate = pubDate ? dayjs(pubDate).format(DATE_FORMAT) : "";
   {
     (image || random) && (
       <Image
-        src={image ? image : ("https://picsum.photos/" +  (imageSize ? imageSize : "1920/1080"))}
+        src={image || randomImg(title, imageSize)}
         width="1920"
         height="1080"
         format="webp"
