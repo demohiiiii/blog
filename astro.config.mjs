@@ -1,4 +1,4 @@
-import mdx from "@astrojs/mdx";
+import mdx from '@astrojs/mdx';
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import playformCompress from "@playform/compress";
@@ -8,7 +8,6 @@ import icon from "astro-icon";
 import pagefind from "astro-pagefind";
 import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "rehype-external-links";
-import rehypeKatex from "rehype-katex";
 
 import remarkMath from "remark-math";
 import { transformers } from "./src/config/transformers.js";
@@ -59,7 +58,7 @@ export default defineConfig({
       transformers,
     },
     remarkPlugins: [remarkMath, remarkAddAnchor, remarkReadingTime, remarkHeadingExtractor],
-    rehypePlugins: [rehypeKatex, rehypeFadeInUp, [
+    rehypePlugins: [rehypeFadeInUp, [
       rehypeExternalLinks,
       {
         content: {

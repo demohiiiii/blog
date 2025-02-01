@@ -4,7 +4,7 @@ import EnvelopeCard from "../../../../components/EnvelopeCard.astro";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
 import BaseCard from "../../../../components/BaseCard.astro";
 import Pagination from "../../../../widget/Pagination.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import { t } from "i18next";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
@@ -16,7 +16,7 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
 
   const postsWithStats = await Promise.all(
     all_posts.map(async (post) => {
-      const { remarkPluginFrontmatter } = await post.render();
+      const { remarkPluginFrontmatter } = await render(post);
       return {
         ...post,
         remarkPluginFrontmatter: {
@@ -79,7 +79,7 @@ const pageLinks = generatePageLinks(totalPages);
         image={post.data.image}
         random={post.data.image ? post.data.image : "true"}
         desc={post.data.description}
-        url={"/blog/" + post.slug}
+        url={"/blog/" + post.id}
         pubDate={post.data.pubDate}
         badge={post.data.badge}
         categories={post.data.categories}
