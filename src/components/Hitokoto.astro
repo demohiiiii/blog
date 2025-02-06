@@ -1,0 +1,7 @@
+---
+const innerText = await fetch("https://v1.hitokoto.cn?c=k&c=i&c=j")
+  .then((response) => response.json())
+  .then((data) => data.hitokoto + "——【" + data.from + "】");
+---
+
+<p><a href="#">{innerText}</a></p>
