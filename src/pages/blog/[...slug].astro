@@ -25,7 +25,8 @@ const displayDate = blog.data.pubDate ? dayjs(blog.data.pubDate).format(DATE_FOR
 ---
 
 <BaseLayout title={blog.data.title} image={blog.data.image} headings={headings} showTOC={true}>
-  <MainCard title={blog.data.title} description={blog.data.description} image={blog.data.image} infoIcon="lucide:info">
+  <MainCard title={blog.data.title} description={blog.data.description} image={blog.data.image} infoIcon="lucide:info" random= "true"
+  imageSize = "1920/600">
     <!-- Article info using PostInfo component -->
     <PostInfo
       pubDate={displayDate}

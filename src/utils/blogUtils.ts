@@ -211,3 +211,19 @@ export function getCategoryColorClass(index: number): string {
   ];
   return colorClasses[index % colorClasses.length];
 }
+
+export function hash(s: string) {
+  let hash = 0;
+  let i, chr;
+  if (s.length === 0) return hash;
+  for (i = 0; i < s.length; i++) {
+    chr   = s.charCodeAt(i);
+    hash  = ((hash << 5) - hash) + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
+
+export function randomImg(s: string, imageSize: string|undefined) {
+  return `https://picsum.photos/seed/${hash(s)}/${(imageSize || "1920/1080")}`;
+};

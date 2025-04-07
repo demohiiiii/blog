@@ -39,6 +39,8 @@ export interface PostData {
   word?: string;
   time?: string;
   url?: string;
+  random?: boolean;
+  imageSize?: string;
 }
 
 // ===== Header Components =====

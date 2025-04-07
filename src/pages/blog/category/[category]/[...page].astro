@@ -43,6 +43,7 @@ const pageLinks = generatePageLinks(totalPages);
         <PostCard
           title={blog.data.title}
           image={blog.data.image}
+          random={blog.data.image ? blog.data.image : "true"}
           description={blog.data.description}
           url={"/blog/" + blog.slug}
           pubDate={blog.data.pubDate}
