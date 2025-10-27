@@ -1,9 +1,10 @@
 ---
-title: Using mdx in Frosti
+title: Using mdx in Frosti 
 description: Using MDX in Frosti to enrich article content with more components
 pubDate: 07 12 2024
 categories:
-  - tech
+  - Documentation
+  - Examples
 tags:
   - Frosti
   - Blog
@@ -62,10 +63,10 @@ import LinkCard from "../../components/mdx/LinkCard.astro";
 
 #### Diff
 
-<Diff r="/image/r.png" l="/image/l.png"></Diff>
+<Diff l="/image/l.png" r="/image/r.png" />
 
 ```astro
-<Diff r="/image/r.png" l="/image/l.png" />
+<Diff l="/image/l.png" r="/image/r.png" />
 ```
 
 #### Error
@@ -138,7 +139,7 @@ import LinkCard from "../../components/mdx/LinkCard.astro";
   title="Frosti"
   desc="My blog project!"
   url="https://github.com/EveSunMaple/Frosti"
-  img="/view.png"
+  img="/logo.png"
 />
 
 ```astro
@@ -146,6 +147,6 @@ import LinkCard from "../../components/mdx/LinkCard.astro";
   title="Frosti"
   desc="My blog project!"
   url="https://github.com/EveSunMaple/Frosti"
-  img="/view.png"
+  img="/logo.png"
 />
 ```

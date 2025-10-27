@@ -8,7 +8,7 @@ A clean, elegant, and fast static blog template! 🚀 Built with Astro
 
 [![license](https://badgen.net/github/license/EveSunMaple/Frosti)](https://github.com/EveSunMaple/Frosti/blob/main/LICENSE)&nbsp;&nbsp;&nbsp;[![release](https://badgen.net/github/release/EveSunMaple/Frosti)](https://github.com/EveSunMaple/Frosti/releases)&nbsp;&nbsp;&nbsp;[![stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/EveSunMaple/Frosti)
 
-[**🖥️ Frosti Demo**](https://frosti.saroprock.com)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;[**🌏 Chinese README**](https://github.com/EveSunMaple/Frosti/blob/main/docs/README.zh-CN.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;[**❤️My Blog**](https://www.saroprock.com)
+[**🖥️ Frosti Demo**](https://frosti.saroprock.com)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;[**🌏 Chinese README**](https://github.com/EveSunMaple/Frosti/blob/main/docs/README.zh-CN.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;[**❤️ My Blog**](https://www.saroprock.com)
 
 ## 📷 Preview
 
@@ -69,17 +69,16 @@ cd Frosti
 pnpm i
 ```
 
-5. Debug and run the project
+### 5. Debug and Run the Project
+
+**On first run or after updating content**, execute `search:index` to generate the search index:
 
 ```sh
-# If this is your first deployment, build first
-pnpm run build
+# Generate the search index for development use
+pnpm run search:index
 
 pnpm run dev
 ```
-
-> [!NOTE]
-> You must build before starting the debug server, otherwise pagefind won't have an index, and the search functionality will not work.
 
 ## 🔧 Configuration
 
@@ -196,6 +195,22 @@ To add new language support or modify existing translations:
 
 1. Add a new language code and corresponding translations in the `translations.yaml` file, or modify existing translations
 2. Change `site.language` in `frosti.config.yaml` to your preferred language code
+
+## 🚀 Automatic Updates
+
+To keep your project up to date with the latest version of Frosti, you can use the provided update script.
+
+```sh
+bash frosti.update.sh
+```
+
+This script will:
+
+1.  **Clone the latest version** of the Frosti repository.
+2.  **Safely update** your project files, adding and overwriting files based on the `.updateignore` file.
+3.  **Intelligently delete** files that have been removed from the official repository, without affecting your ignored files.
+4.  **Clean up** any remaining empty folders and temporary files.
+5.  **Install or update** dependencies using `pnpm`.
 
 ## 👀 Issues
 

@@ -3,7 +3,8 @@ title: "Markdown Style Guide"
 description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
 pubDate: "Jul 01 2024"
 categories:
-  - tech
+  - Documentation
+  - Examples
 tags:
   - Makrdown
 badge: Pin
@@ -43,7 +44,7 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 #### Output
 
-![blog placeholder](/home.webp)
+![blog placeholder](/logo.png)
 
 ## Blockquotes
 
@@ -232,7 +233,7 @@ H<sub>2</sub>O
 
 X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+Press <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
 ```
